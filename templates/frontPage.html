@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Minnit - Front Page</title>
+    </head>
+    <body>
+        <h1>Minnit - a teeny-tiny mini-Reddit</h1>
+        <table border="0">
+            <% _.each(titles, function(title) { %>
+                <tr>
+                    <td>
+                        <a href="<%= bookmarks[title].url %>"><%= title %></a>
+                    </td>
+                    <td>
+                        <form method="POST" action="/vote">
+                            <input type="hidden" name="title" value="<%= title %>">
+                            <input type="image" src="/images/arrow_up_16x16.png" name="direction" value="up">
+                            <input type="image" src="/images/arrow_down_16x16.png" name="direction" value="down">
+                        </form>
+                    </td>
+                    <td>
+                        <%= bookmarks[title].score %> points
+                    </td>
+                </tr>
+            <% }); %>
+        </table>
+        <a href="/signup.html">Join</a>
+        <a href="/submit.html">Submit a new link</a>
+    </body>
+</html>

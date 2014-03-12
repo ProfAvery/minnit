@@ -1,0 +1,15 @@
+{
+  "name": "minnit",
+  "version": "0.1.1",
+  "description": "a teeny-tiny mini-Reddit",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ProfAvery/minnit.git"
+  },
+  "license": "CC-BY-SA-3.0",
+  "dependencies": {
+    "connect": "2.14.x",
+    "underscore": "1.6.x"
+  }
+}
