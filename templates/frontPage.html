@@ -14,8 +14,15 @@
                     <td>
                         <form method="POST" action="/vote">
                             <input type="hidden" name="title" value="<%= title %>">
-                            <input type="image" src="/images/arrow_up_16x16.png" name="direction" value="up">
-                            <input type="image" src="/images/arrow_down_16x16.png" name="direction" value="down">
+                            <input type="hidden" name="direction" value="up">
+                            <input type="image" src="/images/arrow_up_16x16.png">
+                        </form>
+                    </td>
+                    <td>
+                        <form method="POST" action="/vote">
+                            <input type="hidden" name="title" value="<%= title %>">
+                            <input type="hidden" name="direction" value="down">
+                            <input type="image" src="/images/arrow_down_16x16.png">
                         </form>
                     </td>
                     <td>
